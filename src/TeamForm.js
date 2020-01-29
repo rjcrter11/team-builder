@@ -1,4 +1,4 @@
-import React, { useState } from "react";
+import React, { useState, useEffect } from "react";
 
 function TeamForm(props) {
   const [memberInfo, setMemberInfo] = useState({
@@ -19,31 +19,34 @@ function TeamForm(props) {
 
   return (
     <form onSubmit={submitMember}>
-      <label htmlFor="name">Add Member Name</label>
+      <label htmlFor="name">Name</label>
       <input
         id="name"
         name="name"
         type="text"
         placeholder="Add name..."
         onChange={handleChange}
+        value={memberInfo.name}
       />
 
-      <label htmFor="email">Add Jersey Number</label>
+      <label htmlFor="email">Email</label>
       <input
         id="email"
         name="email"
         type="email"
         placeholder="Enter email..."
         onChange={handleChange}
+        value={memberInfo.email}
       />
 
-      <label htmlFor="role">Motto</label>
+      <label htmlFor="role">Role</label>
       <textarea
         id="role"
         name="role"
         type="text"
         placeholder="Add role..."
         onChange={handleChange}
+        value={memberInfo.role}
       />
 
       <button type="submit">Add Player</button>

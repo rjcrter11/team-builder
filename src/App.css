@@ -1,38 +1,58 @@
+* {
+  box-sizing: border-box;
+}
+
 .App {
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+.App h1 {
+  font-size: 4rem;
+  text-decoration: underline;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+form {
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  border: 1px solid gray;
+  border-radius: 3px;
+  width: 20%;
+  margin-left: 5%;
+}
+
+label {
+  width: 50%;
+  padding: 2% 0;
+}
+
+input,
+textarea {
+  width: 80%;
+  border-radius: 4px;
+  box-shadow: none;
+  padding: 2% 0;
+}
+
+button {
+  width: 25%;
+  padding: 2% 0;
+  margin: 2% 0;
+  border-radius: 4px;
+  background-color: dodgerblue;
   color: white;
+  font-size: 0.75rem;
+  font-weight: bold;
 }
 
-.App-link {
-  color: #61dafb;
+.team-info {
+  width: 100%;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+.info {
+  margin-bottom: 20%;
+  border: 1px solid dodgerblue;
+  text-align: left;
 }

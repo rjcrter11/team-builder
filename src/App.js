@@ -19,6 +19,12 @@ function App() {
     }
   ]);
 
+  const memberToEdit = (id) => {
+    const edit = [...teamMembers];
+    edit.splice(id);
+    setTeamMembers(edit);
+  };
+
   const addTeamMember = (member) => {
     const newTeamMember = {
       id: Date.now(),
@@ -31,9 +37,11 @@ function App() {
 
   return (
     <div className="App">
-      <h1>Team List</h1>
-      <TeamForm addTeamMember={addTeamMember} />
-      <TeamInfo teamMembers={teamMembers} />
+      <div className="info-box">
+        <h1>Team List</h1>
+        <TeamInfo teamMembers={teamMembers} memberToEdit={memberToEdit} />
+      </div>
+      <TeamForm memberToEdit={memberToEdit} addTeamMember={addTeamMember} />
     </div>
   );
 }
